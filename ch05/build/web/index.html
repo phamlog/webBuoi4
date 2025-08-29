@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Survey Form - Murach's Java Servlets and JSP</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form action="emailList" method="post">
+          <input type="hidden" name="action" value="add">
+        <img src="images/murachlogo.jpg" alt="Murach Logo" class="logo" />
+
+        <h1>Survey Form</h1>
+        <p class="intro">
+          If you have a moment, we'd appreciate it if you would fill out this survey.
+        </p>
+
+        <section class="user-info">
+          <h2>Your Information</h2>
+          <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" name="firstName" id="firstName" required />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" name="lastName" id="lastName" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required />
+          </div>
+          <div class="form-group">
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="Male" checked /> Male
+            <input type="radio" name="gender" value="Female" /> Female
+            <input type="radio" name="gender" value="Other" /> Other
+          </div>
+          <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" name="dateOfBirth" id="dob" />
+          </div>
+        </section>
+
+        <section class="survey-source">
+          <h2>How did you hear about us?</h2>
+          <div class="form-group">
+            <input type="radio" name="heardFrom" value="Search Engine" checked /> Search engine
+            <input type="radio" name="heardFrom" value="Friend" /> Word of mouth
+            <input type="radio" name="heardFrom" value="Social Media" /> Social media
+            <input type="radio" name="heardFrom" value="Other" /> Other
+          </div>
+        </section>
+
+        <section class="preferences">
+          <h2>Preferences</h2>
+          <div class="form-group">
+            <input type="checkbox" name="wantsUpdates" checked /> YES, I'd like updates.
+          </div>
+          <div class="form-group">
+            <input type="checkbox" name="emailOK" /> YES, please send me email announcements.
+          </div>
+          <div class="form-group">
+            <label for="contactVia">Please contact me by:</label>
+            <select name="contactVia" id="contactVia">
+              <option value="Both" selected>Email or postal mail</option>
+              <option value="Email">Email only</option>
+              <option value="Postal Mail">Postal mail only</option>
+            </select>
+          </div>
+        </section>
+
+        <div class="form-actions">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

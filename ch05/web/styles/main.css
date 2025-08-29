@@ -1,0 +1,126 @@
+/* Reset cơ bản */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body với gradient nền xanh */
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    font-size: 100%;
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* xanh đậm -> xanh nhạt */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    padding: 2.5em;
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Logo căn giữa */
+.container img {
+    display: block;
+    margin: 0 auto 1.5em auto;
+    max-width: 160px;
+}
+
+/* Tiêu đề */
+h1, h2 {
+    color: #1e3c72;  /* xanh đậm */
+    margin-bottom: 1em;
+    text-align: center;
+    font-size: 1.9em;
+    font-weight: bold;
+}
+
+/* Label + Input */
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #444;
+    text-align: left;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="date"], 
+select {
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1.05em;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #2a5298; /* xanh nhạt */
+    outline: none;
+}
+
+/* Button */
+input[type="submit"], button {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    border: none;
+    padding: 0.9em 1.6em;
+    border-radius: 10px;
+    font-size: 1.15em;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+input[type="submit"]:hover, 
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Bảng */
+table {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-collapse: collapse;   
+    margin-top: 1.5em;
+    font-size: 1.05em;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: .8em;
+}
+
+/* Result box */
+.result-box {
+    background: #f0f7ff; /* xanh nhạt */
+    padding: 1.2em;
+    border: 1px solid #c9e0ff;
+    border-radius: 12px;
+    margin-bottom: 1.8em;
+    font-size: 1.05em;
+    color: #333;
+}
+
+/* Hiệu ứng */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
